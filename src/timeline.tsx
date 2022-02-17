@@ -95,7 +95,8 @@ export class Timeline extends Component<Props, {}> {
 	}
 
 	componentWillUnmount() {
-		this.timeline.destroy();
+		if(this.timeline != null && this.timeline != undefined)
+			this.timeline.destroy();
 	}
 
 	componentDidMount() {
